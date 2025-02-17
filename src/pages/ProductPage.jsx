@@ -47,8 +47,6 @@ const ProductPage = () =>{
                 <div>Id: {product.id}</div>
                 <div>Name: {product.name}</div>
                 <div>Weight: {product.weight}</div>
-                <div>Width: {product.size.width}</div>
-                <div>Height: {product.size.height}</div>
             </div>
             <div>
                 Comments Section

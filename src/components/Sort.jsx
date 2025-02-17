@@ -17,7 +17,7 @@ const Sort = () =>{
             return a.count - b.count;
         }
         if(sortParam === 'size'){
-            return a.width * a.height - b.width * b.height
+            return a.size.width * a.size.height - b.size.width * b.size.height
         }
     })
 

@@ -5,7 +5,7 @@ import axios from "axios";
 export const fetchItemsData = createAsyncThunk(
     'testApp/FetchItemsData',
     async (_,{dispatch})=>{
-        const data = await axios.get('https://67b329b7bc0165def8d0238e.mockapi.io/')
+        const data = await axios.get('https://67b329b7bc0165def8d0238e.mockapi.io/items')
 
         dispatch(setItemsOptions(data))
     }

@@ -5,12 +5,11 @@ import axios from "axios";
 export const fetchItemsData = createAsyncThunk(
     'testApp/FetchItemsData',
     async (_, { dispatch }) => {
-        try {
-            const response = await axios.get('https://67b329b7bc0165def8d0238e.mockapi.io/items');
-            dispatch(setItemsOptions(response.data));
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
+        fetch('https://67b329b7bc0165def8d0238e.mockapi.io/items')
+            .then((res) => res.json())
+            .then((json) => {
+                dispatch(setItemsOptions(json));
+            });
     }
 );
 
